@@ -1,0 +1,9 @@
+.testmondata
+.env
+*.pyc
+__pycache__
+
+users.json
+groups/*.csv
+
+all_entra_users_bulk_download.csv
