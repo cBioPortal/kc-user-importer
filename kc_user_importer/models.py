@@ -4,9 +4,7 @@ from pydantic import BaseModel, Field, computed_field
 
 
 class User(BaseModel):
-    """
-    A Microsoft AD USER from Users/bulk_download
-    """
+    """user_data from Microsoft AD Users/bulk_download"""
 
     userPrincipalName: str
     displayName: str
@@ -40,9 +38,8 @@ class User(BaseModel):
 
 
 class GroupUserInfo(BaseModel):
-    """
-    A Microsoft AD USER from Groups/bulk_download
-    """
+    """group_user_data from Microsoft AD Groups/bulk_download"""
+
     id: str
     userPrincipalName: str
     displayName: str
@@ -64,9 +61,8 @@ class GroupUserInfo(BaseModel):
 
 
 class UserRepresentation(BaseModel):
-    """
-    Keycloak v1.2 UserRepresentation Schema
-    """
+    """Keycloak v1.2 UserRepresentation Schema"""
+
     id: Optional[str] = None
     username: str
     createdTimestamp: Optional[int] = None

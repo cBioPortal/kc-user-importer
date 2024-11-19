@@ -57,14 +57,14 @@ def parse_users_file(filename: str, group_lookup) -> List[UserRepresentation]:
             if user_data.mail != "":
                 firstName, *rest = user_data.displayName.split()
                 groups = [*['btc-all'], *group_lookup.get(user_data.mail, [])]
-                p = UserRepresentation(
+
+                users.append(UserRepresentation(
                     username=user_data.mail,
                     email=user_data.mail,
                     firstName=firstName,
                     lastName=' '.join(rest),
                     groups=groups,
-                )
-                users.append(p)
+                ))
     return users
 
 
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--out-file", default="users.json")
     # parser.add_argument("-gf", "--group-file")
     parser.add_argument("-g", "--groups", 
-                        help="Directory containing Microsoft Entra Group bulk download files", 
+                        help="Directory containing Microsoft Entra Group bulk download files",
                         required=True)
     args = parser.parse_args()
 
