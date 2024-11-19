@@ -1,0 +1,36 @@
+[
+  {
+    "username": "wayneb@wayneenterprises.com",
+    "email": "wayneb@wayneenterprises.com",
+    "firstName": "Bruce",
+    "lastName": "Wayne",
+    "enabled": true,
+    "emailVerified": false,
+    "attributes": {},
+    "groups": [
+      "groupA",
+      "groupB"
+    ],
+    "disableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {}
+  },
+  {
+    "username": "kentc@dailyplanet.com",
+    "email": "kentc@dailyplanet.com",
+    "firstName": "Clark",
+    "lastName": "Kent",
+    "enabled": true,
+    "emailVerified": false,
+    "attributes": {},
+    "groups": [
+      "groupA",
+      "groupB"
+    ],
+    "disableCredentialTypes": [],
+    "requiredActions": [],
+    "notBefore": 0,
+    "access": {}
+  }
+]
